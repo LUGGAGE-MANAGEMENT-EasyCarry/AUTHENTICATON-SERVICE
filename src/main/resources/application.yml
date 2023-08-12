@@ -1,0 +1,26 @@
+
+server:
+  port: 7078
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  data:
+
+  main:
+
+   allow-bean-definition-overriding: true
+
+  application:
+    name: "authentication-service"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/secc
+    username: postgres
+    password: Yaman.1903
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8671/eureka/
+
+

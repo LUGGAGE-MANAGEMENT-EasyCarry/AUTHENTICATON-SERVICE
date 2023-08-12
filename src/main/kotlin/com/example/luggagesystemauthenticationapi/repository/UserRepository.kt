@@ -1,10 +1,11 @@
 package com.example.luggagesystemauthenticationapi.repository
 
-import com.example.luggagesystemauthenticationapi.user.User
-import org.springframework.data.repository.kotlin.CoroutineCrudRepository
-import java.util.UUID
+import com.example.luggagesystemauthenticationapi.domain.model.Users
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
 
-interface UserRepository : CoroutineCrudRepository<User, UUID> {
-    suspend fun findByEmail(email: String): User
+@Repository
+interface UserRepository : JpaRepository<Users, Long> {
+     fun findByEmail(email: String): Users
 
 }
